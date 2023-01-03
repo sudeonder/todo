@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-sude:282419Sg@todoapp.rzgdc3u.mongodb.net/todolistDB?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin-sude:sude@todoapp.rzgdc3u.mongodb.net/todolistDB?retryWrites=true&w=majority");
 
 //create a new schema
 const itemsSchema = {
@@ -61,8 +61,8 @@ app.post("/", function(req, res){
 
     })
     res.redirect("/"+listName);
-
   }
+  res.redirect("/");
 });
 
 app.post("/delete", function(req, res){
