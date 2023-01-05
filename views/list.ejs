@@ -24,4 +24,12 @@
       </form>
   </div>
 
+  <div class="box" >
+    
+    <form class="item" action="/createCustomList" method="post">
+      <input type="text" name="newListName" placeholder="create your custom list" autocomplete="off">
+      <button type="submit" name="newList" value="<%= listTitle%>">+</button>
+    </form>
+  </div>
+
 <%- include("footer") -%>

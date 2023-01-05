@@ -40,9 +40,22 @@ app.get("/", function(req, res) {
 
 });
 
+
+//create custom list
+app.post("/createCustomList", function(req, res){
+  const customListName = req.body.newListName; 
+  res.redirect("/" + customListName);
+
+})
+
 //create new task
 app.post("/", function(req, res){
   const listName = req.body.list;
+
+  const newList = req.body.newList;
+
+  console.log(newList)
+
   //create new Item
   const newItem = new Item({
     name: req.body.newItem
